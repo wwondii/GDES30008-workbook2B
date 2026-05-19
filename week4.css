@@ -1,0 +1,234 @@
+body {
+    background: #e8eaed;
+    color: #2c3340;
+    font-family: 'Courier New', Courier, monospace;
+    padding: 24px;
+}
+
+p {
+    font-size: 1.2rem;
+    font-family: Helvetica, sans-serif;
+    font-weight: normal;
+    line-height: 1.7;
+}
+
+p:hover {
+    color: #7b90a8;
+}
+
+h1 {
+    font-size: 4rem;
+    margin-bottom: 12px;
+    padding: 20px 40px 40px 320px;
+    color: #2c3340;
+}
+
+h2 {
+    font-family: 'Courier New', monospace;
+    font-size: 2rem;
+    margin-bottom: 8px;
+    color: #2c3340;
+}
+
+hr {
+    border: none;
+    border-top: 1px solid #7b90a8;
+    margin-bottom: 16px;
+    margin-left: 320px;
+    margin-right: 320px;
+}
+
+span.caption {
+    font-size: 0.85rem;
+    color: #7b90a8;
+    font-family: 'Courier New', monospace;
+    display: block;
+    margin-top: 8px;
+    text-align: center;
+}
+
+/* ---- Camera status bar ---- */
+
+.statusbar {
+    display: flex;
+    gap: 24px;
+    padding: 8px 40px 8px 320px;
+    font-family: 'Courier New', monospace;
+    font-size: 1.1rem;
+    letter-spacing: 2px;
+    color: #7b90a8;
+    border-bottom: 0.5px solid #c5cdd6;
+    margin-bottom: 0;
+}
+
+.statusbar span:first-child {
+    color: #c0392b;
+    letter-spacing: 1px;
+}
+
+.date {
+    margin-left: auto;
+}
+
+/* ---- LCD section label ---- */
+
+.lcd-label {
+    font-family: 'Courier New', monospace;
+    font-size: 0.7rem;
+    letter-spacing: 2px;
+    color: #7b90a8;
+    margin-bottom: 16px;
+}
+
+/* ---- Sketch / viewfinder ---- */
+
+.sketch-section {
+    padding: 8px 320px 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.sketch-section h2 {
+    align-self: flex-start;
+    margin-bottom: 36px;
+}
+
+.viewfinder {
+    position: relative;
+    width: 100%;
+}
+
+.viewfinder-corner {
+    position: absolute;
+    width: 16px;
+    height: 16px;
+    z-index: 1;
+}
+
+.sketch-frame {
+    width: 100%;
+    aspect-ratio: 4 / 3;
+    border: 1px solid #b0bcc9;
+    background: #d4d8de;
+    display: block;
+}
+
+.sketch-meta {
+    display: flex;
+    gap: 24px;
+    margin-top: 10px;
+    font-family: 'Courier New', monospace;
+    font-size: 0.7rem;
+    letter-spacing: 2px;
+    color: #7b90a8;
+    align-self: flex-start;
+}
+
+/* ---- Description ---- */
+
+.description-section {
+    padding: 0 320px 36px;
+}
+
+.description-section p {
+    color: #4a5568;
+}
+
+/* ---- Coin flip log ---- */
+
+.coinflip-section {
+    padding: 0 320px 40px;
+}
+
+.flip-entry {
+    margin-bottom: 24px;
+    padding-bottom: 24px;
+    border-bottom: 0.5px solid #c5cdd6;
+}
+
+.flip-entry:last-of-type {
+    border-bottom: none;
+}
+
+.flip-question {
+    margin: 0 0 10px;
+    color: #2c3340;
+    font-size: 1rem;
+    display: flex;
+    align-items: baseline;
+    gap: 10px;
+}
+
+.frame-count {
+    font-family: 'Courier New', monospace;
+    font-size: 0.7rem;
+    color: #7b90a8;
+    letter-spacing: 1px;
+    flex-shrink: 0;
+}
+
+/* ---- Spoiler tag ---- */
+
+.spoiler {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    cursor: pointer;
+    user-select: none;
+}
+
+.spoiler-label {
+    font-family: 'Courier New', monospace;
+    font-size: 0.75rem;
+    letter-spacing: 1px;
+    color: #4a6278;
+}
+
+.spoiler-content {
+    font-family: Helvetica, sans-serif;
+    font-size: 0.95rem;
+    background: #7b90a8;
+    color: #7b90a8;
+    padding: 3px 12px;
+    border-radius: 2px;
+    transition: color 0.25s ease, background 0.25s ease;
+}
+
+.spoiler.revealed .spoiler-content {
+    background: #dde3ea;
+    color: #2c3340;
+}
+
+/* ---- Back button ---- */
+
+.back-button {
+    background-color: #4a6278;
+    padding: 10px 24px;
+    display: inline-block;
+    margin-top: 40px;
+    margin-left: 320px;
+    margin-bottom: 48px;
+}
+
+.back-button a {
+    color: #fff;
+    font-family: 'Courier New', monospace;
+    font-weight: bold;
+    font-style: italic;
+    text-decoration: none;
+    font-size: 20px;
+}
+
+.back-button a:hover {
+    text-decoration: underline;
+}
+
+#dvd {
+  position: fixed;
+  width: 200px;
+  height: auto;
+  z-index: 4;
+  cursor: pointer;
+  pointer-events: auto;
+}

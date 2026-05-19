@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<head>
+    <title>Week 7</title>
+    <link rel="stylesheet" href="week7.css">
+</head>
+
+<body>
+
+<!-- Processing background sketch -->
+    <iframe src="sketches/linetrail/index.html" scrolling="no" class="bg-sketch"></iframe>
+
+<!-- Faint overlay -->
+    <div class="bg-overlay"></div>
+
+<!-- Camera status bar -->
+    <div class="camera-statusbar">
+        <span>REC ●</span>
+        <span>ISO 400</span>
+        <span>f/2.8</span>
+        <span>1/250s</span>
+        <span class="date-stamp">24.05.2026</span>
+    </div>
+
+<!-- Page title -->
+    <h1>Week 7</h1>
+    <hr>
+
+    <div class="container">
+
+<!-- Section 1 - Single image + description -->
+        <div class="section">
+            <h2>Music Machine</h2>
+
+            <div class="image-section">
+                <img src="images/week7notes1.jpg" alt="Week 7 image 1" class="section-image" onclick="openLightbox(this)"/>
+            </div>
+
+            <div class="description-section">
+                <div class="lcd-label">// FRAME NOTES</div>
+                <p>In week 7's tutorial, we experimented a bit more with making sounds through our sensors. This was similar to the circuit we made last week with the LED light. </p>
+            </div>
+        </div>
+
+        <hr>
+
+<!-- Section 2 - Image + video side by side + description -->
+        <div class="section">
+            <h2>Headspace Helmet</h2>
+
+            <div class="media-row">
+                <div class="media-item has-image">
+                    <img src="images/headspace.png" alt="Week 7 image 2" class="media-image" onclick="openLightbox(this)"/>
+                </div>
+                <div class="media-item">
+                    <video class="media-video" controls>
+                        <source src="videos/headspace.mov" type="video/mp4"/>
+                    </video>
+                </div>
+            </div>
+
+            <div class="description-section">
+                <div class="lcd-label">// FRAME NOTES</div>
+                <p>The next circuit we made was especially interesting because we were able to see it being used in action (in a super low-fidelity setting but still very interesting!). </p>
+            </div>
+        </div>
+
+        <hr>
+
+<!-- Section 3 - Image + video side by side + description -->
+        <div class="section">
+            <h2>Fisshhhh Playground</h2>
+
+            <div class="media-row">
+                <div class="media-item has-image">
+                    <img src="images/fishplayground.png" alt="Week 7 image 3" class="media-image" onclick="openLightbox(this)"/>
+                </div>
+                <div class="media-item">
+                    <video class="media-video" controls>
+                        <source src="videos/fish_playground.mov" type="video/mp4"/>
+                    </video>
+                </div>
+            </div>
+
+            <div class="description-section">
+                <div class="lcd-label">// FRAME NOTES</div>
+                <p>Lastly, in the last 10 minutes we were also able to make the fish playground circuit work as well. it does look a little like a fish flapping its fins ahahha.</p>
+            </div>
+        </div>
+
+        <hr>
+
+<!-- Section 4-->
+        <div class="section">
+            <h2>Activity: Chindogu invention!</h2>
+
+            <div class="image-section">
+                <img src="images/chindogu.png" alt="image of Chindogu sketch" class="section-image" onclick="openLightbox(this)"/>
+            </div>
+
+            <div class="description-section">
+                <div class="lcd-label">// FRAME NOTES</div>
+                <p>The idea behind my Chindogu invention is a umbrella hat that users can wear to prevent sunburn. In Asia, its very common for people to bring umbrellas out on a sunny day as a method for effective sun block. Fr this invention, I hence had an idea for a hat that detects UV rays and opens an umbrella automatically once a certain level of UV has been exceeded.  </p>
+            </div>
+        </div>
+       <hr>
+<!-- Workbook Development -->
+        <div class="section">
+            <h2>Workbook Development</h2>
+            <div class="lcd-label">// CONTACT SHEET</div>
+
+            <div class="dev-row">
+                <div class="dev-image">
+                    <img src="images/development3.1.png" alt="Development image 1" />
+                </div>
+                <div class="dev-text">
+                    <div class="spoiler" onclick="document.querySelectorAll('.spoiler').forEach(s => s.classList.add('revealed'))">
+                        <span class="spoiler-label">▶ DEVELOP</span>
+                        <span class="spoiler-content">The accompanying image here is the first iteration of the weeks page after I spent some time tweaking it. The idea was that you were utilising the controls to change the camera settings however I feel this was not communicated very effectively. I had furthermore used the interactive processing file we had explored in class in week 4. Ideally, I would have liked to make the controls useable, and the user would have to use the camera controls to change between brightness settings (weeks) <br> this iteration was later scrapped as i felt it was very minimally interactive.</span>
+                    </div>
+                </div>            
+            </div>
+
+            <div class="dev-row">
+                <div class="dev-image">
+                    <img src="images/development3.2.png" alt="Development image 2" data-preview="images/bts3.2.png"/>
+                </div>
+                <div class="dev-text">
+                    <div class="spoiler" onclick="document.querySelectorAll('.spoiler').forEach(s => s.classList.add('revealed'))">
+                        <span class="spoiler-label">▶ DEVELOP</span>
+                        <span class="spoiler-content">The second iteration i made was more personalised as i drew the icons myself. At this point in creating the homepage, i still liked the idea of using the processing file we had explored during class however here it started to feeling a little distracting, like there was too much white and black and not enough colour. (hover over picture to view sketches) </span>
+                    </div>
+                </div>            
+            </div>
+
+            <div class="dev-row">
+                <div class="dev-image">
+                    <img src="images/development3.3.png" alt="Development image 3" data-preview="images/bts3.3.png"/>
+                </div>
+                <div class="dev-text">
+                    <div class="spoiler" onclick="document.querySelectorAll('.spoiler').forEach(s => s.classList.add('revealed'))">
+                        <span class="spoiler-label">▶ DEVELOP</span>
+                        <span class="spoiler-content">To introduce more colour, I started adding silly cat gifs that I liked. the processing file was still super distracting at this stage and made me feel a bit nauseous after staring at it for long. (hover over picture to view code)</span>
+                    </div>
+                </div>            
+            </div>            
+
+            <div class="dev-row">
+                <div class="dev-image">
+                    <img src="images/development3.4.png" alt="Development image 4"/>
+                </div>
+                <div class="dev-text">
+                    <div class="spoiler" onclick="document.querySelectorAll('.spoiler').forEach(s => s.classList.add('revealed'))">
+                        <span class="spoiler-label">▶ DEVELOP</span>
+                        <span class="spoiler-content">In the end, i decided it was ultimately a good idea to scrap the processing background completely in favour of a more static background. As my icons reminded me of icons on a desktop screen, i carried on with the retro theme and chose a early version desktop background which i actually really like when paired with my icons. </span>
+                    </div>
+                </div>            
+            </div>  
+
+            <div class="dev-row">
+                <div class="dev-image">
+                    <img src="images/development3.5.png" alt="Development image 5" data-preview="images/bts3.5.png"/>
+                </div>
+                <div class="dev-text">
+                    <div class="spoiler" onclick="document.querySelectorAll('.spoiler').forEach(s => s.classList.add('revealed'))">
+                        <span class="spoiler-label">▶ DEVELOP</span>
+                        <span class="spoiler-content">As i was exploring through the resources on milanote, i came across a <a href="https://unim-ajl.github.io/Workbook/assigments.html" target="_blank">past students work</a> where they had incorporated draggable elements into their workbook. I really really liked this idea and thought that it really paired well with my computer like icons. I hence opened their file and learnt step by step how they wrote their code, further personalising it through adding sound effects to increase immersion. I also was able to remove the hyperlink at the bottom through making the image an anchor itself, using double click to activate the link so images remained draggable. (hover over picture to view code)</span>
+                    </div>
+                </div>            
+            </div>  
+
+        </div>    
+
+<!-- Back button -->
+        <div class="back-button">
+            <a href="weekspage.html">Back to Weeks</a>
+        </div>
+
+    </div>
+
+<!-- Lightbox modal -->
+    <div class="lightbox" id="lightbox" onclick="this.classList.remove('active')">
+        <img id="lightbox-img" src="" alt=""/>
+        <span class="lightbox-close">✕</span>
+    </div>
+
+<!-- bouncing element -->
+<img id="dvd" src="" draggable="false"/>
+<script src="dvd.js"></script>
+
+<!-- hover preview image -->
+<img id="hover-preview" src="" draggable="false"/>
+
+
+<!-- Hover to reveal: Received Assistance from Claude AI -->
+<script>
+    function openLightbox(img) {
+        document.getElementById('lightbox-img').src = img.src;
+        document.getElementById('lightbox').classList.add('active');
+    }
+
+    const preview = document.getElementById('hover-preview');
+
+    document.querySelectorAll('.dev-image img').forEach(function(img) {
+        img.addEventListener('mouseenter', function() {
+            const bts = this.dataset.preview;
+            if (bts) {
+                preview.src = bts;
+                preview.style.display = 'block';
+            }
+        });
+        img.addEventListener('mouseleave', function() {
+            preview.style.display = 'none';
+            preview.src = '';
+        });
+    });
+</script>
+
+</body>

@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Photo Gallery</title>
+  <link rel="stylesheet" href="weekspage.css"/>
+</head>
+<body>
+
+<audio id="page-sound" src="sound/windows-startup.mp3" autoplay></audio>
+<img id="hover-preview" src="" draggable="false"/>
+
+  <!-- background sketch -->
+  <img src="images/desktopbg.jpg" class="bg-sketch"></img>
+
+  <div class="overlay"></div>
+
+  <!-- title -->
+  <h1 class="title"><span id="glitch-text">[DRAG and DROP]</span> GALLERY</h1>
+
+  <!-- back to cam -->
+  <a href="index.html" class="back-link">Back to cam</a>
+
+  <!-- draggable week icons - double click to open link -->
+  <div id="week1">
+    <a href="week1.html" target="_blank">
+      <img src="images/icon_week1.png" alt="Week 1" width="180" draggable="false"/>
+    </a>
+  </div>
+
+  <div id="week2">
+    <a href="week2.html" target="_blank">
+      <img src="images/icon_week2.png" alt="Week 2" width="180" draggable="false"/>
+    </a>
+  </div>
+
+  <div id="week3">
+    <a href="week3.html" target="_blank">
+      <img src="images/icon_week3.png" alt="Week 3" width="180" draggable="false"/>
+    </a>
+  </div>
+
+  <div id="week4">
+    <a href="week4.html" target="_blank">
+      <img src="images/icon_week4.png" alt="Week 4" width="200" draggable="false"/>
+    </a>
+  </div>
+
+  <div id="week5">
+    <a href="week5.html" target="_blank">
+      <img src="images/icon_week5.png" alt="Week 5" width="150" draggable="false"/>
+    </a>
+  </div>
+
+  <div id="week6">
+    <a href="week6.html" target="_blank">
+      <img src="images/icon_week6.png" alt="Week 6" width="200" draggable="false"/>
+    </a>
+  </div>
+
+  <div id="week7">
+    <a href="week7.html" target="_blank">
+      <img src="images/icon_week7.png" alt="Week 7" width="180" draggable="false"/>
+    </a>
+  </div>
+
+  <div id="week8">
+    <a href="week8.html" target="_blank">
+      <img src="images/icon_week8.png" alt="Week 8" width="200" draggable="false"/>
+    </a>
+  </div>
+
+  <div id="week9">
+    <a href="week9.html" target="_blank">
+      <img src="images/icon_week9.png" alt="Week 9" width="200" draggable="false"/>
+    </a>
+  </div>
+
+  <div id="research">
+    <a href="research.html" target="_blank">
+      <img src="images/icon_research.png" alt="Research" width="200" draggable="false"/>
+    </a>
+  </div>
+
+  <div id="gif1">
+    <img src="images/gif1.gif" alt="" width="200" draggable="false"/>
+  </div>
+
+  <div id="gif2">
+    <img src="images/gif2.gif" alt="" width="200" draggable="false"/>
+  </div>
+
+    <div id="gif3">
+    <img src="images/gif3.gif" alt="" width="200" draggable="false"/>
+  </div>
+
+  <!-- custom cursor -->
+  <img id="cursor-img" src="images/cursor_weekpage_doubleclick.png" draggable="false"/>
+
+  <script src="weekspage.js"></script>
+
+
+
+  <script>
+    // Received Assistance from Claude AI: 
+    const fonts = [
+      "'Share Tech Mono', monospace",
+      "'VT323', monospace",
+      "'Courier Prime', monospace",
+      "'Special Elite', cursive",
+      "'Cutive Mono', monospace",
+      "serif",
+      "sans-serif",
+      "'Times New Roman', serif"
+    ];
+
+    const glitch = document.getElementById('glitch-text');
+    let current = 0;
+
+    setInterval(function() {
+      current = (current + 1) % fonts.length;
+      glitch.style.fontFamily = fonts[current];
+    }, 150);
+
+    //custom cursor 
+    const cursorImg = document.getElementById('cursor-img');
+    document.addEventListener('mousemove', function(e) {
+    cursorImg.style.left = (e.clientX + 12) + 'px';
+    cursorImg.style.top  = (e.clientY + 12) + 'px';
+    });
+
+
+  </script>
+
+</body>
+</html>

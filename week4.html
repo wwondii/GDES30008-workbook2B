@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<head>
+    <title>Week 4</title>
+    <link rel="stylesheet" href="week4.css">
+</head>
+
+<body>
+    <div class="statusbar">
+        <span>REC ●</span>
+        <span>ISO 400</span>
+        <span>f/2.8</span>
+        <span>1/250s</span>
+        <span class="date">03.04.2026</span>
+    </div>
+
+    <h1>Shots and Film from Week 4</h1>
+    <hr>
+
+    <div class="container">
+
+<!-- Processing sketch - viewfinder frame -->
+        <div class="sketch-section">
+            <h2>Introduction to Creative Coding</h2>
+            <div class="viewfinder">
+                <iframe src="sketches/kaomoji/index.html" scrolling="No" class="sketch-frame" title="Processing sketch for Week 4"></iframe>
+            </div>
+            <div class="sketch-meta">
+                <span>LIVE VIEW</span>
+                <span>AWB</span>
+                <span>AF ◉</span>
+            </div>
+        </div>
+        <br>
+<!-- Description -->
+        <div class="description-section">
+            <div class="lcd-label">// EXPOSURE LOG</div>
+            <p>In Week 4's tutorial, we experimented with using processing and learnt a few basic functions for creative coding. As someone who was never very good at Javascript, I found processing to be somewhat similar yet also more structured in its formatting. I'm excited to explore what kinds of interesting functions i can implement in my workbook!</p>
+        </div>
+
+        <hr>
+
+<!-- Coin flip log -->
+        <div class="coinflip-section">
+            <h2>Slave to the Algorithm</h2>
+            <div class="lcd-label">// SHOT SEQUENCE — click to develop</div>
+
+            <div class="flip-entry">
+                <p class="flip-question"> Heads: Coffee in the morning? Tails: Stick to water.</p>
+                <div class="spoiler" onclick="this.classList.toggle('revealed')">
+                    <span class="spoiler-label">▶ DEVELOP</span>
+                    <span class="spoiler-content">Heads. Yesss I really needed the coffee</span>
+                </div>
+            </div>
+
+            <div class="flip-entry">
+                <p class="flip-question"> Heads: Listen to music on bus? Tails: Watch a lecture.</p>
+                <div class="spoiler" onclick="this.classList.toggle('revealed')">
+                    <span class="spoiler-label">▶ DEVELOP</span>
+                    <span class="spoiler-content">Tails. Fine I'll catch up on my lecture :(</span>
+                </div>
+            </div>
+
+            <div class="flip-entry">
+                <p class="flip-question"> Heads: Buy a cookie as a study snack! (please) Tails: No snack.</p>
+                <div class="spoiler" onclick="this.classList.toggle('revealed')">
+                    <span class="spoiler-label">▶ DEVELOP</span>
+                    <span class="spoiler-content">Tails. NOOOOOOOOOOOOO</span>
+                </div>
+            </div>
+
+            <div class="flip-entry">
+                <p class="flip-question"> Heads: Get GYG for lunch. Tails: Get Sushi.</p>
+                <div class="spoiler" onclick="this.classList.toggle('revealed')">
+                    <span class="spoiler-label">▶ DEVELOP</span>
+                    <span class="spoiler-content">Heads.</span>
+                </div>
+            </div>
+
+            <div class="flip-entry">
+                <p class="flip-question"> Heads: Study at the Library. Tails: Study at my favourite cafe.</p>
+                <div class="spoiler" onclick="this.classList.toggle('revealed')">
+                    <span class="spoiler-label">▶ DEVELOP</span>
+                    <span class="spoiler-content">Tails. yay!</span>
+                </div>
+            </div>
+
+            <div class="flip-entry">
+                <p class="flip-question"> Heads: Study one more hour. Tails: Go home.</p>
+                <div class="spoiler" onclick="this.classList.toggle('revealed')">
+                    <span class="spoiler-label">▶ DEVELOP</span>
+                    <span class="spoiler-content">Heads. ;-; ok.</span>
+                </div>
+            </div>
+
+            <div class="flip-entry">
+                <p class="flip-question"> Heads: Watch one more episode of Kdrama. Tails: Go to bed at a reasonable time.</p>
+                <div class="spoiler" onclick="this.classList.toggle('revealed')">
+                    <span class="spoiler-label">▶ DEVELOP</span>
+                    <span class="spoiler-content">Heads. YES(?)</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Description -->
+        <div class="description-section">
+            <div class="lcd-label">// EXPOSURE LOG</div>
+            <p>One of the homework activities this week was 'Slave to the Algorithm', a challenge where we would let a coin flip determine our choices throughout the day. 
+As someone who struggles with indecisivenesss, I actually already do something similar to slave to the algorithm in my daily life: I would always assign two tasks to some random numbers and then ask my friends to choose between those numbers. 
+I think by asking such questions, there's also a type of psychology behind it as it also helps me realise which option i truly want in the moment when im being indecisive. </p>
+        </div>
+
+        <hr>
+
+<!-- Back button -->
+        <div class="back-button">
+            <a href="weekspage.html">Back to Weeks</a>
+        </div>
+
+    </div>
+
+<!-- bouncing dvd element-->
+<img id="dvd" src="" draggable="false"/>
+<script src="dvd.js"></script>
+
+</body>

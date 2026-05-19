@@ -1,0 +1,91 @@
+@import url('https://fonts.googleapis.com/css2?family=Share+Tech+Mono&family=VT323&family=Courier+Prime&family=Special+Elite&family=Cutive+Mono&display=swap');
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+html, body {
+  height: 100%;
+  background: #000;
+  overflow: hidden;
+  font-family: 'Share Tech Mono', monospace;
+}
+
+.bg-sketch {
+  position: fixed;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  border: none;
+  z-index: 0;
+  pointer-events: auto;
+}
+
+#hover-preview {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 400px;
+  height: auto;
+  z-index: 20;
+  display: none;
+  pointer-events: none;
+}
+
+.overlay {
+  position: fixed;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background: rgba(0, 0, 0, 0.6);
+  z-index: 1;
+  pointer-events: none;
+}
+
+.title {
+  position: fixed;
+  top: 24px;
+  left: 28px;
+  font-size: 48px;
+  font-weight: bold;
+  color: #fbff00;
+  letter-spacing: 0.05em;
+  z-index: 10;
+  pointer-events: none;
+}
+
+.back-link {
+  position: fixed;
+  bottom: 24px;
+  right: 28px;
+  font-size: 36px;
+  color: #fff;
+  text-decoration: none;
+  letter-spacing: 0.05em;
+  z-index: 10;
+}
+
+.back-link:hover {
+  text-decoration: underline;
+  color: #1f44ff;
+  font-family: 'Courier New', Courier, monospace;
+}
+
+#cursor-img {
+  position: fixed;
+  pointer-events: none;
+  z-index: 999;
+  width: 80px;   /* whatever size you want */
+  display: none;
+}
+/* icon positions: Instructions on how to execute this was instructed by Claude AI before I rearranged them manually to my liking */
+#week1    { position: fixed; top: 28%; left: 5%;  z-index: 5; cursor: grab; }
+#week2    { position: fixed; top: 18%;  left: 28%; z-index: 5; cursor: grab; }
+#week3    { position: fixed; top: 30%; left: 35%; z-index: 5; cursor: grab; }
+#week4    { position: fixed; top: 13%;  left: 48%; z-index: 5; cursor: grab; }
+#week5    { position: fixed; top: 28%; left: 66%; z-index: 5; cursor: grab; }
+#week6    { position: fixed; top: 64%; left: 8%;  z-index: 5; cursor: grab; }
+#week7    { position: fixed; top: 52%; left: 28%; z-index: 5; cursor: grab; }
+#week8    { position: fixed; top: 72%; left: 40%; z-index: 5; cursor: grab; }
+#week9    { position: fixed; top: 52%; left: 65%; z-index: 5; cursor: grab; }
+#research { position: fixed; top: 58%; left: 82%; z-index: 5; cursor: grab; }
+#gif1 { position: fixed; top: 15%; left: 15%; z-index: 5; cursor: grab; }
+#gif2 { position: fixed; top: 70%; left: 55%; z-index: 5; cursor: grab; }
+#gif3 { position: fixed; top: 5%; right: 5%; z-index: 5; cursor: grab; }

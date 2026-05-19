@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Workbook 2B</title>
+  <link rel="stylesheet" href="style.css"/>
+</head>
+
+<body>
+
+<!-- Background video -->
+  <video id="bg-video" autoplay muted loop playsinline>
+    <source src="videos/photos_taken.mp4" type="video/mp4"/>
+  </video>
+
+<!-- Dark overlay -->
+  <div id="overlay-dark"></div>
+
+<!-- Corner labels -->
+  <span class="corner tl">JINWEN LUAN</span>
+
+<!-- Top right navigation -->
+  <div class="top-right-links">
+    <a href="weekspage.html" target="_blank">VIEW DESKTOP GALLERY</a>
+  </div>
+
+<!-- Save hint -->
+  <p id="save-hint">PRESS 'S' TO SAVE</p>
+
+<!-- Webcam sketch iframe -->
+  <div class="webcam-overlay" id="overlay">
+    <iframe 
+      src="sketches/webcam/index.html"
+      allow="camera"
+      allowtransparency="true"
+      scrolling="no"
+      style="width:100%; height:100%; border:none; background:transparent;">
+    </iframe>
+  </div>
+
+<!-- Camera image -->
+  <div class="camera-wrap">
+    <img src="images/camera.png" alt="camera" draggable="false"/>
+  </div>
+
+<!-- Scripts -->
+  <script src="sketches/webcam/libraries/p5.min.js"></script>
+  <script src="falling_letters.js"></script>
+
+<!--Custom Cursor-->
+  <img id="cursor-img" src="images/cursor_homepage_default.png" draggable="false"/>
+
+  <script>
+  //custom cursor
+  const cursorImg = document.getElementById('cursor-img');
+  document.addEventListener('mousemove', function(e) {
+    cursorImg.style.left = (e.clientX + 12) + 'px';
+    cursorImg.style.top  = (e.clientY + 12) + 'px';
+  });
+  //Save canvas keyboard shortcut 
+    const webcamFrame = document.querySelector('.webcam-overlay iframe');
+
+    document.addEventListener('keydown', function(e) {
+      if (e.key === 's' || e.key === 'S') {
+        webcamFrame.contentWindow.postMessage('saveCanvas', '*');
+      }
+    });
+
+  </script>
+
+</body>
+</html>

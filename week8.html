@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<head>
+    <title>Week 8</title>
+    <link rel="stylesheet" href="week8.css">
+</head>
+
+<body>
+
+<!-- Processing background sketch -->
+    <iframe src="sketches/rippletrail/index.html" scrolling="no" class="bg-sketch"></iframe>
+
+<!-- Faint overlay -->
+    <div class="bg-overlay"></div>
+
+<!-- Camera status bar -->
+    <div class="camera-statusbar">
+        <span>REC ●</span>
+        <span>ISO 400</span>
+        <span>f/2.8</span>
+        <span>1/250s</span>
+        <span class="date-stamp">01.05.2026</span>
+    </div>
+
+<!-- Page title -->
+    <h1>Week 8</h1>
+    <hr>
+
+    <div class="container">
+
+<!-- Section 1 - Image + image side by side + description -->
+        <div class="section">
+            <h2>Musical Instruments...?</h2>
+
+            <div class="media-row">
+                <div class="media-item has-image">
+                    <img src="images/week8.2.png" alt="Week 8 image 1" class="media-image" onclick="openLightbox(this)"/>
+                </div>
+                <div class="media-item has-image">
+                    <img src="images/week8.png" alt="Week 8 image 2" class="media-image" onclick="openLightbox(this)"/>
+                </div>
+            </div>
+
+            <div class="description-section">
+                <div class="lcd-label">// FRAME NOTES</div>
+                <p>In week 8's tutorial, we made make shift instruments using the arduino circuit. My piano skills from when i was 8 really came in clutch here hahahaha</p>
+            </div>
+        </div>
+
+        <hr>
+
+<!-- Section 2 - Video + video side by side + description -->
+        <div class="section">
+            <h2>Results!</h2>
+
+            <div class="media-row">
+                <div class="media-item">
+                    <video class="media-video" controls>
+                        <source src="videos/marylamb.mov" type="video/mp4"/>
+                    </video>
+                </div>
+                <div class="media-item">
+                    <video class="media-video" controls>
+                        <source src="videos/hotcrossbuns.mov" type="video/mp4"/>
+                    </video>
+                </div>
+            </div>
+
+            <div class="description-section">
+                <div class="lcd-label">// FRAME NOTES</div>
+                <p>Listen to our version of Mary had a little lamb and Hot Cross buns here!</p>
+            </div>
+        </div>
+
+        <hr>
+
+<!-- Workbook Development -->
+        <div class="section">
+            <h2>Workbook Development</h2>
+            <div class="lcd-label">// CONTACT SHEET</div>
+
+            <div class="dev-row">
+                <div class="dev-image">
+                    <img src="images/colour_palette.png" alt="Development image 1">
+                </div>
+                <div class="dev-text">
+                    <div class="spoiler" onclick="document.querySelectorAll('.spoiler').forEach(s => s.classList.add('revealed'))">
+                        <span class="spoiler-label">▶ DEVELOP</span>
+                        <span class="spoiler-content">This week, I started planning for the overall look of my pages for each week. Using 'Create a Palette', I made several colour palettes for my pages, taking inspiration from each week's activities. (as seen in the accompanying image) Furthermore, I planned out the overall structure for each week in figma.</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="dev-row">
+                <div class="dev-image">
+                    <img src="images/circletrail.png" alt="Development image 2" data-preview="images/bts4.2.png"/>
+                </div>
+                <div class="dev-text">
+                    <div class="spoiler" onclick="document.querySelectorAll('.spoiler').forEach(s => s.classList.add('revealed'))">
+                        <span class="spoiler-label">▶ DEVELOP</span>
+                        <span class="spoiler-content">For each week, i thought about how to make the pages interactive. I ultimately settled on the colour trail function that was briefly explored in week 4's tutorial and tweaking the colour of each week's trail to correspond with my chosen colour palette. Lastly, as I employed a desktop interface inspired design for my weekspage, I followed along with the retro digital aesthetic and was inspired by the bouncing DVD icon seen in TV screens. A moving icon was hence implemented into each page with the next page's hyperlink to allow easy navigation for the user. (hover over picture to view code) </span>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+<!-- Back button -->
+        <div class="back-button">
+            <a href="weekspage.html">Back to Weeks</a>
+        </div>
+
+    </div>
+
+<!-- Lightbox modal -->
+    <div class="lightbox" id="lightbox" onclick="this.classList.remove('active')">
+        <img id="lightbox-img" src="" alt=""/>
+        <span class="lightbox-close">✕</span>
+    </div>
+
+<!-- bouncing element -->
+<img id="dvd" src="" draggable="false"/>
+<script src="dvd.js"></script>
+
+<!-- hover preview image -->
+<img id="hover-preview" src="" draggable="false"/>
+
+<!-- Hover to reveal: Received Assistance from Claude AI -->
+<script>
+    function openLightbox(img) {
+        document.getElementById('lightbox-img').src = img.src;
+        document.getElementById('lightbox').classList.add('active');
+    }
+
+    const preview = document.getElementById('hover-preview');
+
+    document.querySelectorAll('.dev-image img').forEach(function(img) {
+        img.addEventListener('mouseenter', function() {
+            const bts = this.dataset.preview;
+            if (bts) {
+                preview.src = bts;
+                preview.style.display = 'block';
+            }
+        });
+        img.addEventListener('mouseleave', function() {
+            preview.style.display = 'none';
+            preview.src = '';
+        });
+    });
+</script>
+
+</body>

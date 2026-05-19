@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<head>
+    <title>Week 6</title>
+    <link rel="stylesheet" href="week6.css">
+</head>
+
+<body>
+
+<!-- Processing background sketch -->
+    <iframe src="sketches/arduino_draw/index.html" scrolling="no" class="bg-sketch"></iframe>
+
+<!-- Faint overlay -->
+    <div class="bg-overlay"></div>
+
+<!-- Lightbox modal -->
+    <div class="lightbox" id="lightbox" onclick="this.classList.remove('active')">
+        <img id="lightbox-img" src="" alt=""/>
+        <span class="lightbox-close">✕</span>
+    </div>
+
+<!-- Camera status bar -->
+    <div class="camera-statusbar">
+        <span>REC ●</span>
+        <span>ISO 400</span>
+        <span>f/2.8</span>
+        <span>1/250s</span>
+        <span class="date-stamp">17.04.2026</span>
+    </div>
+
+<!-- Page title -->
+    <h1>Week 6</h1>
+    <hr>
+
+    <div class="container">
+
+<!-- Section 1 - Image + description -->
+        <div class="section">
+            <h2>Labelling Arduino Parts</h2>
+
+            <div class="image-section">
+                <div class="viewfinder has-image">
+                    <img src="images/week6notes1.jpg" alt="Week 6 image 1" class="section-image" onclick="openLightbox(this)"/>
+                </div>
+                <div class="sketch-meta">
+                    <span>PLAYBACK</span>
+                    <span>1/2</span>
+                    <span>JPEG</span>
+                </div>
+            </div>
+
+            <div class="description-section">
+                <div class="lcd-label">// FRAME NOTES</div>
+                <p>Despite having some knowledge of Arduinos from using them briefly in High School, it was still a challenge to recall what each part's function was as well as what their name was. The only one I could remember was bread board because i always thought 'bread' was funny hahahaha</p>
+            </div>
+        </div>
+
+        <hr>
+
+<!-- Section 2 - Image + description -->
+        <div class="section">
+            <h2>Sensor -> Light on!</h2>
+
+            <div class="image-section">
+                <div class="viewfinder has-image">
+                    <img src="images/week6notes2.jpg" alt="Week 6 image 2" class="section-image" onclick="openLightbox(this)"/>
+                </div>
+                <div class="sketch-meta">
+                    <span>PLAYBACK</span>
+                    <span>2/2</span>
+                    <span>JPEG</span>
+                </div>
+            </div>
+
+            <div class="description-section">
+                <div class="lcd-label">// FRAME NOTES</div>
+                <p>We also constructed a small circuit in this tutorial using a sensor and LED light. This was a nice refresher for me on how to use arduinos. </p>
+            </div>
+        </div>
+
+        <hr>
+
+<!-- Workbook Development -->
+        <div class="section">
+            <h2>Workbook Development</h2>
+            <div class="lcd-label">// CONTACT SHEET</div>
+
+            <div class="dev-row">
+                <div class="dev-image">
+                    <img src="images/development2.1.png" alt="Development image 1"/>
+                </div>
+                <div class="dev-text">
+                    <div class="spoiler" onclick="document.querySelectorAll('.spoiler').forEach(s => s.classList.add('revealed'))">
+                        <span class="spoiler-label">▶ DEVELOP</span>
+                        <span class="spoiler-content">This week was also when I started to reconstruct my workbook. From my research all the way back in week 3, I really like Wen Zhuang's 'Portraits and Repetition' and I knew I wanted to try and incorporate the falling words into my homepage for Workbook2B. The accompany image here is a draft I had constructed in figma, where some of the fallen words would be a hyperlink and take you to my research/weekpages. This ultimately didn't work because I couldnt figure out how to make the letters a hyperlink yet draggable at the same time without it interfering with user experience. (it got frustrating with the constant opening of new tabs) </span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="dev-row">
+                <div class="dev-image">
+                    <img src="images/development2.2.png" alt="Development image 2" data-preview="images/bts2.2.png"/>
+                </div>
+                <div class="dev-text">
+                    <div class="spoiler" onclick="document.querySelectorAll('.spoiler').forEach(s => s.classList.add('revealed'))">
+                        <span class="spoiler-label">▶ DEVELOP</span>
+                        <span class="spoiler-content">Like my first workbook, I wanted to stick to the theme of digital cameras and so, I took advantage of the face cam function in processing. The digicam png was one I found for free use online. I simply ordered the z-index of the processing file to be behind the digicam png, resulting in the illusion of the digicam screen being on. I furthermore implemented the click s to save function to make it more interactive. (hover over picture to view code)</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="dev-row">
+                <div class="dev-image">
+                    <img src="images/development2.3.png" alt="Development image 3" data-preview="images/bts2.3.png"/>
+                </div>
+                <div class="dev-text">
+                    <div class="spoiler" onclick="document.querySelectorAll('.spoiler').forEach(s => s.classList.add('revealed'))">
+                        <span class="spoiler-label">▶ DEVELOP</span>
+                        <span class="spoiler-content">As mentioned before, my original hyperlink plan did not work properly but I still really liked the idea of using falling elements that can be dragged around. I thus decided to ultimately simplify the plan and placed the hyperlink as a simple button in the top right corner. Regarding the falling letters element, I was largely inspired by one of the designs in Tiger Dingsun's Reading machine named '<a href="https://tdingsun.github.io/wen/">Portraits and Repetition</a> by Wen Zhuang'. Hence, I utilised Claude AI and asked it to explain to me how to implement a similar function for my workbook. Through this lesson with Claude, I gained the knowledge that processing functions that interact with mouse clicks cannot be iframes as the page content sitting above the iframe intercepts the click events before they can reach the sketch, preventing any mouse-based interactions from registering. (hover over picture to view code)</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="dev-row">
+                <div class="dev-image">
+                    <img src="images/development2.4.png" alt="Development image 4" data-preview="images/bts2.4.png"/>
+                </div>
+                <div class="dev-text">
+                    <div class="spoiler" onclick="document.querySelectorAll('.spoiler').forEach(s => s.classList.add('revealed'))">
+                        <span class="spoiler-label">▶ DEVELOP</span>
+                        <span class="spoiler-content">Some final touches that I added to this homepage was that I added a dither affect to the camera to emphasise the reference to retro digital cameras. My name also replaced GDES30008 in the top left corner as otherwise it would be completed covered by the fallen letters. I also made the cursor an encouragement for visitors to smile! since youre on camera :) <br> For this custom cursor however, I also consulted Claude AI as I was unable to figure out how to supass the default 32x32 custom cursor limitation. Claude AI's solution was to use a 'follow effect' where the desired cursor img will simply follow behind the default cursor (which is hidden by css to give the illusion of a complete custom cursor). the limitation in this however was the the placement of the img was not accurate to the cursor, hence hyperlinks were sometimes a little hard to click into. I also made the ultimate decision in the end to not hide the cursor when users interact (hold and drag) with th letters so it would be easier and more intuitive. (hover over picture to view code)</span>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+<!-- Back button -->
+        <div class="back-button">
+            <a href="weekspage.html">Back to Weeks</a>
+        </div>
+
+    </div>
+
+<!-- bouncing element -->
+<img id="dvd" src="" draggable="false"/>
+<script src="dvd.js"></script>
+
+<!-- hover preview image -->
+<img id="hover-preview" src="" draggable="false"/>
+
+
+<!-- Hover to reveal: Received Assistance from Claude AI -->
+<script>
+    function openLightbox(img) {
+        document.getElementById('lightbox-img').src = img.src;
+        document.getElementById('lightbox').classList.add('active');
+    }
+
+    const preview = document.getElementById('hover-preview');
+
+    document.querySelectorAll('.dev-image img').forEach(function(img) {
+        img.addEventListener('mouseenter', function() {
+            const bts = this.dataset.preview;
+            if (bts) {
+                preview.src = bts;
+                preview.style.display = 'block';
+            }
+        });
+        img.addEventListener('mouseleave', function() {
+            preview.style.display = 'none';
+            preview.src = '';
+        });
+    });
+</script>
+
+</body>
